@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
 main {
     background-image: url("../img/Treno.jpg");
     background-repeat: no-repeat;
@@ -11,13 +17,14 @@ main {
 h1 {
     position: absolute;
     font-size: 3em;
-    top: 0%;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, -25%);
 }
 
 div {
     background-color: brown;
+    border: 2px inset black;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -32,11 +39,22 @@ div {
 div ul {
     list-style: none;
     padding-right: 40px;
+    padding-left: 40px;
 }
 
 div li {
-    padding-top: 20px;
     line-height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    border: 2px white solid;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+div li:hover {
+    animation: 1s ease;
+    transform: scale(1.1);
 }
 
 #journey::before {
