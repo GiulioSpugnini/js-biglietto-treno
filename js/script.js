@@ -12,9 +12,16 @@ PASSAGGI:
 */
 
 // 1. Chiedere quanti km l'utente vuole percorrere
-const userJourney = parseInt(prompt('Quanti km vuoi percorrere? '));
+const userJourney = parseInt(prompt('Quanti km vuoi percorrere? ').trim());
 if (isNaN(userJourney)) {
     alert("Hai inserito l'input sbagliato, ti prego di riprovare");
     window.location.reload();
 }
 console.log(userJourney);
+// 2. Chiedere l'eta del passegero
+const userAge = parseInt(prompt('Quanti anni hai? ').trim());
+if (isNaN(userAge)) {
+    alert("Hai inserito l'input sbagliato, ti prego di riprovare");
+    window.location.reload();
+}
+console.log(userAge);
