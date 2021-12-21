@@ -13,19 +13,39 @@ PASSAGGI:
 
 // 1. Chiedere quanti km l'utente vuole percorrere
 const userJourney = parseInt(prompt("Quanti km vuoi percorrere? ").trim());
-if (isNaN(userJourney)) {
+if (isNaN(userJourney || userJourney == 0)) {
     alert("Hai inserito l'input sbagliato, ti prego di riprovare");
     window.location.reload();
 }
-console.log(userJourney);
+console.log('Chilometri percorsi: ', userJourney);
 // 2. Chiedere l'eta del passegero
 const userAge = parseInt(prompt("Quanti anni hai? ").trim());
-if (isNaN(userAge)) {
+if (isNaN(userAge) || userAge == 0) {
     alert("Hai inserito l'input sbagliato, ti prego di riprovare");
     window.location.reload();
 }
-console.log(userAge);
+console.log('Anni del passeggero: ', userAge);
 // 3. Calcolare il prezzo totale del viaggio
 // # 3a. Calcolare prezzo €/km
-const ticketPrice = 0.21 * ` ${userJourney}`;
-console.log(ticketPrice);
+const ticketPrice = 0.21 * userJourney;
+let userDiscount;
+let finalPrice;
+// 3b. Applicare sconto 20% per i minorenni
+if (userAge < 18) {
+    userDiscount = ticketPrice * 0.20;
+    console.log('Lo sconto per il passeggero è stato di: ', userDiscount);
+    finalPrice = ticketPrice - userDiscount;
+
+    console.log('Il prezzo scontato è: ', finalPrice);
+
+
+} else if (userAge > 65) {
+    userDiscount = ticketPrice * 0.40;
+    console.log('Lo sconto per il passeggero è stato di: ', userDiscount);
+    finalPrice = ticketPrice - userDiscount;
+
+    console.log('Il prezzo scontato è: ', finalPrice);
+
+} else {
+    console.log('Il prezzo del biglietto è: ', ticketPrice);
+}
