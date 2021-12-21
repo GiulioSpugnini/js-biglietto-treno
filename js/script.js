@@ -1,4 +1,4 @@
-console.log('JS OK!');
+console.log("JS OK!");
 
 /*
 PASSAGGI:
@@ -12,16 +12,20 @@ PASSAGGI:
 */
 
 // 1. Chiedere quanti km l'utente vuole percorrere
-const userJourney = parseInt(prompt('Quanti km vuoi percorrere? ').trim());
+const userJourney = parseInt(prompt("Quanti km vuoi percorrere? ").trim());
 if (isNaN(userJourney)) {
     alert("Hai inserito l'input sbagliato, ti prego di riprovare");
     window.location.reload();
 }
 console.log(userJourney);
 // 2. Chiedere l'eta del passegero
-const userAge = parseInt(prompt('Quanti anni hai? ').trim());
+const userAge = parseInt(prompt("Quanti anni hai? ").trim());
 if (isNaN(userAge)) {
     alert("Hai inserito l'input sbagliato, ti prego di riprovare");
     window.location.reload();
 }
 console.log(userAge);
+// 3. Calcolare il prezzo totale del viaggio
+// # 3a. Calcolare prezzo €/km
+const ticketPrice = 0.21 * ` ${userJourney}`;
+console.log(ticketPrice);
