@@ -1,15 +1,68 @@
+main {
+    background-image: url("../img/Treno.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 10%;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    font-size: 3em;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+}
+
 div {
     background-color: brown;
-    width: 500px;
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    max-width: 500px;
+    min-height: 650px;
     border-radius: 20px;
     padding: 10px;
 }
 
 div ul {
     list-style: none;
+    padding-right: 40px;
 }
 
 div li {
-    padding-top: 5px;
+    padding-top: 20px;
+    line-height: 50px;
+}
+
+#journey::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f238';
+    font-weight: 900;
+    padding-right: 20px;
+}
+
+#userAge::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f007';
+    font-weight: 900;
+    padding-right: 20px;
+}
+
+#userDiscount::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f295';
+    font-weight: 900;
+    padding-right: 20px;
+}
+
+#ticketPrice::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f02b';
+    font-weight: 900;
+    padding-right: 20px;
 }
