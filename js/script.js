@@ -13,7 +13,7 @@ PASSAGGI:
 
 // 1. Chiedere quanti km l'utente vuole percorrere
 const userJourney = parseInt(prompt("Quanti km vuoi percorrere? ").trim());
-if (isNaN(userJourney || userJourney == 0)) {
+if (isNaN(userJourney) || userJourney == 0) {
     alert("Hai inserito l'input sbagliato, ti prego di riprovare");
     window.location.reload();
 }
