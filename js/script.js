@@ -47,6 +47,8 @@ if (userAge < 18) {
     console.log('Il prezzo dopo aver applicato lo sconto è: ', finalPrice);
 
 } else {
+    userDiscount = 0;
+    finalPrice = ticketPrice;
     console.log('Lo sconto per il passeggero è stato di: 0');
     console.log('Il prezzo del biglietto è: ', ticketPrice);
 }
