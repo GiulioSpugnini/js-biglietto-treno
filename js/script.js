@@ -32,7 +32,7 @@ let userDiscount;
 let finalPrice;
 // 3b. Applicare sconto 20% per i minorenni
 if (userAge < 18) {
-    userDiscount = ticketPrice * 0.20;
+    userDiscount = (ticketPrice * 0.20).toFixed(2);
     console.log('Lo sconto per il passeggero è stato di: ', userDiscount);
     finalPrice = (ticketPrice - userDiscount).toFixed(2);
 
@@ -40,12 +40,21 @@ if (userAge < 18) {
 
 
 } else if (userAge > 65) {
-    userDiscount = ticketPrice * 0.40;
+    userDiscount = (ticketPrice * 0.40).toFixed(2);
     console.log('Lo sconto per il passeggero è stato di: ', userDiscount);
     finalPrice = (ticketPrice - userDiscount).toFixed(2);
 
     console.log('Il prezzo dopo aver applicato lo sconto è: ', finalPrice);
 
 } else {
+    console.log('Lo sconto per il passeggero è stato di: 0');
     console.log('Il prezzo del biglietto è: ', ticketPrice);
 }
+const userJourneyResult = document.getElementById('journey');
+userJourneyResult.innerHTML = `Chilometri da percorrere: ${userJourney}`;
+const userAgeResult = document.getElementById('userAge');
+userAgeResult.innerHTML = `Età del passeggero: ${userAge}`;
+const userDiscountResult = document.getElementById('userDiscount');
+userDiscountResult.innerHTML = `Sconto applicato: ${userDiscount}`;
+const userTicketPriceResult = document.getElementById('ticketPrice');
+userTicketPriceResult.innerHTML = `Prezzo del biglietto: ${finalPrice}`;

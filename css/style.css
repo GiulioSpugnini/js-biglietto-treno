@@ -1,0 +1,15 @@
+div {
+    background-color: brown;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+div ul {
+    list-style: none;
+}
+
+div li {
+    padding-top: 5px;
+}
